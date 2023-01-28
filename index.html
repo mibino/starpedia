@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>星辰百科</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="style.css">
+<script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+<style>
+			#myInput {
+				background-image: url('https://static.runoob.com/images/mix/searchicon.png'); /* 搜索按钮 */
+				background-position: 10px 12px; /* 定位搜索按钮 */
+				background-repeat: no-repeat; /* 不重复图片 */
+				width: 85%;
+				font-size: 16px;
+				padding: 12px 20px 12px 40px;
+				border: 1px solid #ddd;
+				margin-bottom: 12px; 
+			}
+			
+			#myTable {
+				border-collapse: collapse; 
+				width: 100%; 
+				border: 1px solid #ddd;
+				font-size: 18px; 
+			}
+			
+			#myTable th, #myTable td {
+				text-align: left;
+				padding: 12px;
+			}
+			
+			#myTable tr {
+				/* 表格添加边框 */
+				border-bottom: 1px solid #ddd; 
+			}
+			
+			#myTable tr.header, #myTable tr:hover {
+				/* 表头及鼠标移动过 tr 时添加背景 */
+				background-color: #f1f1f1;
+			}
+			a {
+				text-decoration-line: none;
+			}
+
+			a:hover {
+				text-decoration-line: underline;
+			}
+		</style>
+	
+		<script>
+			function myFunction() {
+			  // 声明变量
+			  var input, filter, table, tr, td, i;
+			  input = document.getElementById("myInput");
+			  filter = input.value.toUpperCase();
+			  table = document.getElementById("myTable");
+			  tr = table.getElementsByTagName("tr");
+			
+			  // 循环表格每一行，查找匹配项
+			  for (i = 0; i < tr.length; i++) {
+				td = tr[i].getElementsByTagName("td")[0];
+				if (td) {
+				  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+					tr[i].style.display = "";
+				  } else {
+					tr[i].style.display = "none";
+				  }
+				} 
+			  }
+			}
+		</script>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<div class="container-fluid">
+<a class="navbar-brand" href="http://pedia.dogetv.cn/index.html">星辰百科</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="mynavbar">
+<ul class="navbar-nav me-auto">
+<li class="nav-item">
+<a class="nav-link" href="app.html">APP端</a>
+</li>
+</li>
+</ul>
+</form>
+</div>
+</div>
+</nav>
+<div class="container-fluid mt-3">
+
+	
+    <table id="myTable">
+        <tbody>
+			<center><input type="text" id="myInput" onkeyup="myFunction()" placeholder="搜索..."></center>
+            <tr class="header">
+                <th style="width:60%; color: black">条目列表:</th>
+            </tr>
+			<tr>
+			<td>
+			<center><a href="books/2.html"><h3>杰哥不要</h3></a></center>
+			</td>
+			</tr>
+            <tr>
+                <td>
+                    <center><a href="books/1.html"><h3>114514</h3></a></center>
+             </td>
+            </tr>
+        </tbody>
+    </table>
+	</div>
+<hr>
+</div>
+</body>
+</html>

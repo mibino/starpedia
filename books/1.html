@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>星辰百科</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="style.css">
+<script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+<style>
+			#myInput {
+				background-image: url('https://static.runoob.com/images/mix/searchicon.png'); /* 搜索按钮 */
+				background-position: 10px 12px; /* 定位搜索按钮 */
+				background-repeat: no-repeat; /* 不重复图片 */
+				width: 85%;
+				font-size: 16px;
+				padding: 12px 20px 12px 40px;
+				border: 1px solid #ddd;
+				margin-bottom: 12px; 
+			}
+			
+			#myTable {
+				border-collapse: collapse; 
+				width: 100%; 
+				border: 1px solid #ddd;
+				font-size: 18px; 
+			}
+			
+			#myTable th, #myTable td {
+				text-align: left;
+				padding: 12px;
+			}
+			
+			#myTable tr {
+				/* 表格添加边框 */
+				border-bottom: 1px solid #ddd; 
+			}
+			
+			#myTable tr.header, #myTable tr:hover {
+				/* 表头及鼠标移动过 tr 时添加背景 */
+				background-color: #f1f1f1;
+			}
+			a {
+				text-decoration-line: none;
+			}
+
+			a:hover {
+				text-decoration-line: underline;
+			}
+		</style>
+	
+		<script>
+			function myFunction() {
+			  // 声明变量
+			  var input, filter, table, tr, td, i;
+			  input = document.getElementById("myInput");
+			  filter = input.value.toUpperCase();
+			  table = document.getElementById("myTable");
+			  tr = table.getElementsByTagName("tr");
+			
+			  // 循环表格每一行，查找匹配项
+			  for (i = 0; i < tr.length; i++) {
+				td = tr[i].getElementsByTagName("td")[0];
+				if (td) {
+				  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+					tr[i].style.display = "";
+				  } else {
+					tr[i].style.display = "none";
+				  }
+				} 
+			  }
+			}
+		</script>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<div class="container-fluid">
+<a class="navbar-brand" href="http://pedia.dogetv.cn/index.html">星辰百科</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="mynavbar">
+<ul class="navbar-nav me-auto">
+<li class="nav-item">
+<a class="nav-link" href="app.html">APP端</a>
+</li>
+</li>
+</ul>
+</form>
+</div>
+</div>
+</nav>
+<div class="container-fluid mt-3">
+<h1>114514</h1>
+<hr>
+<p>此梗来自日本的<span title="黄色" style="background: #000000; color: #000000;">黄色</span>电影《真夏の夜の银梦》，114514是其中一位人物“田所浩二”说的台词空耳的，意思为“好啊、来啊!”。经常被亿些玩梗的人译为“好时代，来临力!”</p>
+<img src="https://mibino.github.io/img-save/114514.jpg"/>
+<p>
+</div>
+<hr>
+</div>
+</body>
+</html>
